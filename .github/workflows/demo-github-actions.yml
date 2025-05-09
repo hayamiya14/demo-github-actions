@@ -1,10 +1,10 @@
 name: Demo Github Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions.
+run-name: CI run triggered by ${{ github.actor }}
 on:
   push:
     branches: [main]
 jobs:
-  node-ci:
+  nodejs-ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,8 +20,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
+      - name: Run Lint
         run: npm run lint
 
-      - name: Tests
+      - name: Run Tests
         run: npm run test
+
+      - name: Run Build
+        run: npm run build
