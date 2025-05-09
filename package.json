@@ -5,7 +5,7 @@
   "description": "",
   "keywords": [],
   "license": "ISC",
-  "author": "hayamiya14",
+  "author": "hayamiya",
   "type": "module",
   "exports": {
     ".": {
